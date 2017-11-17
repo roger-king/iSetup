@@ -1,8 +1,19 @@
-os=uname
+#!/bin/bash
+os="$(uname)"
+user=$USER
+home_dir=/home/$USER
+workspace_dir=$home_dir/Workspace
+labs_dir=$workspace/labs
 
-if [ $os == "Darwin"]; 
+if [ "$os" == "Darwin" ]; 
 then
-    # 1. Install Command Line Tools for XCode
+    echo "Setting up your mac!"
+    # 1. Create workspace folder
+    mkdir $home_dir/Workspace
+
+    #2. Create labs folder
+    mkdir labs_dir
+
     xcode-select --install
 
     # 2. Install Homebrew
@@ -12,6 +23,9 @@ then
     brew install python
 
     #4. Run our python scripts
+
 else
     # Expect Linux (for now only support Fedora)
+    echo "This is a linux machine"
+
 fi
