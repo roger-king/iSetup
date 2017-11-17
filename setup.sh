@@ -5,6 +5,17 @@ home_dir=/home/$USER
 workspace_dir=$home_dir/Workspace
 labs_dir=$workspace/labs
 
+xcodeExists () {
+    cmd="$(xcode-select -p)"
+    if [ "cmd" == "/Library/Developer/CommandLineTools" ]
+    then
+        return true
+    
+    fi
+
+    return false
+}
+
 if [ "$os" == "Darwin" ]; 
 then
     echo "Setting up your mac!"
@@ -15,6 +26,18 @@ then
     mkdir labs_dir
 
     xcode-select --install
+
+    cli_tools_installing=true
+
+    while cli_tools_installing; do
+        if xcodeExists;
+        then
+            cli_tools_installing=false
+            echo "Installing XCode Command Line Tools"
+            sleep 5
+            
+        fi
+    done
 
     # 2. Install Homebrew
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /usr/local
