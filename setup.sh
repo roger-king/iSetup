@@ -35,7 +35,7 @@ then
             cli_tools_installing=false
             echo "Installing XCode Command Line Tools"
             sleep 5
-            
+
         fi
     done
 
@@ -46,9 +46,11 @@ then
     brew install python
 
     #4. Run our python scripts
+    python ./scripts/main.py $home_dir/Downloads "mac"
 
 else
     # Expect Linux (for now only support Fedora)
     echo "This is a linux machine"
+    python ./scripts/applications.py $home_dir/Downloads
 
 fi

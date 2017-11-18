@@ -1,0 +1,63 @@
+{
+    "apps": [
+        {
+            "name": "VSCode",
+            "mac": "https://go.microsoft.com/fwlink/?LinkID=620882",
+            "filename": "VSCode-darwin-stable.zip"
+        },
+        {
+            "name": "Jetbrains Toolbox",
+            "mac": "https://www.jetbrains.com/toolbox/download/download-thanks.html?platform=mac",
+            "filename": "jetbrains-toolbox.dmg"
+        },
+        {
+            "name": "Spotify",
+            "mac": "https://www.spotify.com/us/download/mac/",
+            "filename": "SpotifyInstaller.zip"
+        },
+        {
+            "name": "Docker",
+            "mac": "https://download.docker.com/mac/stable/Docker.dmg",
+            "filename": "Docker.dmg"
+        },
+        {
+            "name": "Firefox",
+            "mac": "https://www.mozilla.org/en-US/firefox/new/?scene=2",
+            "filename": "firefox.dmg"
+        }
+    ],
+    "programming": [
+        {
+            "name": "node.js",
+            "mac": "node",
+            "fedora": ""
+        },
+        {
+            "name": "go lang",
+            "mac": "go",
+            "fedora": ""
+        },
+        {
+            "name": "gradle",
+            "mac": "gradle",
+            "fedora": ""
+        },
+        {
+            "name": "kotlin",
+            "mac": "kotlin",
+            "fedora": ""
+        },
+        {
+            "name": "elixir",
+            "mac": "elixir"
+        },
+        {
+            "name": "python",
+            "mac": "python"
+        },
+        {
+            "name": "python3",
+            "mac": "python3"
+        }
+    ]
+}
